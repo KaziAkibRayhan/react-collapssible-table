@@ -2,6 +2,9 @@ import React from "react";
 import Table from "./Table";
 
 const TraderTable = () => {
+  const handleContentClick = (e) => {
+    e.stopPropagation();
+  };
   const data = [
     {
       expertTrader: "Expert Trader",
@@ -32,7 +35,7 @@ const TraderTable = () => {
       open_time: "1:45:59 PM",
       profit_loss: <span className="text-[var(--color-green)]">+ $ 10.25</span>,
       copy: (
-        <span>
+        <span onClick={handleContentClick}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="copy" width="24" height="24" fill="var(--color-red)">
             <path
               fill="none"
@@ -47,7 +50,7 @@ const TraderTable = () => {
         </span>
       ),
       action: (
-        <div className="flex justify-center items-center gap-5">
+        <div className="flex justify-center items-center gap-5" onClick={handleContentClick}>
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="var(--color-green)" className="w-7 h-7">
               <path
@@ -94,7 +97,7 @@ const TraderTable = () => {
       open_time: "1:45:59 PM",
       profit_loss: <span className="text-[var(--color-green)]">+ $ 10.25</span>,
       copy: (
-        <span>
+        <span onClick={handleContentClick}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="copy" width="24" height="24" fill="var(--color-red)">
             <path
               fill="none"
@@ -109,7 +112,7 @@ const TraderTable = () => {
         </span>
       ),
       action: (
-        <div className="flex justify-center items-center gap-5">
+        <div className="flex justify-center items-center gap-5" onClick={handleContentClick}>
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="var(--color-green)" className="w-7 h-7">
               <path
@@ -156,7 +159,7 @@ const TraderTable = () => {
       open_time: "1:45:59 PM",
       profit_loss: <span className="text-[var(--color-green)]">+ $ 10.25</span>,
       copy: (
-        <span>
+        <span onClick={handleContentClick}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="copy" width="24" height="24" fill="var(--color-red)">
             <path
               fill="none"
@@ -171,7 +174,7 @@ const TraderTable = () => {
         </span>
       ),
       action: (
-        <div className="flex justify-center items-center gap-5">
+        <div className="flex justify-center items-center gap-5" onClick={handleContentClick}>
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="var(--color-green)" className="w-7 h-7">
               <path
