@@ -1,22 +1,32 @@
-const { useState } = require("react");
+import React from "react";
+import RowContent from "./RowContent";
 
-const RowItem = ({ id, name, details, state }) => {
-  const [open, setOpen] = useState(false);
-
+const RowItem = ({ index, isOpen, setOpenRowIndex, expertTrader, risk_score, leverage, group, trade, instrument, volume, open_price, open_time, profit_loss, copy, action }) => {
   const toggleRow = () => {
-    setOpen(!open);
+    setOpenRowIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
+  const handleContentClick = (e) => {
+    e.stopPropagation();
   };
 
   return (
-    <li onClick={toggleRow} className={open ? "open" : ""}>
+    <li onClick={toggleRow} className={isOpen ? "open" : ""}>
       <div className="heading">
-        <div className="col">{id}</div>
-        <div className="col">{name}</div>
-        <div className="col">{details}</div>
-        <div className="col">{state}</div>
+        <div className="col">{expertTrader}</div>
+        <div className="col">{risk_score}</div>
+        <div className="col">{leverage}</div>
+        <div className="col">{group}</div>
+        <div className="col">{trade}</div>
+        <div className="col">{instrument}</div>
+        <div className="col">{volume}</div>
+        <div className="col">{open_price}</div>
+        <div className="col">{open_time}</div>
+        <div className="col">{profit_loss}</div>
+        <div className="col">{copy}</div>
+        <div className="col">{action}</div>
       </div>
-      {/* <RowContent open={open} /> */}
-      {/* {this.props.children} */}
+      <RowContent open={isOpen} handleContentClick={handleContentClick} />
     </li>
   );
 };
