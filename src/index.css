@@ -3,33 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --bg-color-1: #21293c;
-  --top-header-bg: #171e2e;
-  --tab-color: #1a2234;
-  --sidebar-bg: #1c2333;
-  --bg-color-4: #1b212f;
-  --bg-color-5: #273042;
-  --bg-color-6: #252b3d;
-  --bg-color-7: #242c3e;
-  --bg-color-8: #2c3753;
-  --bg-color-9: #2a334d;
-  --bg-color-right-sidebar-1: #394768;
-  --bg-color-right-sidebar-2: #212a40;
-  --color-primary: #2294e6;
-  --color-primary2: #3faaf7;
   --color-white: #ffffff;
-  --color-white-2: #c6c9cd;
-  --color-black: #000000;
-  --color-red: #ea4335;
-  --color-green: #04be7f;
-  --border-color-profile: #2f384b;
-  --button-color: #ffa665;
-  --text-color: #7d8da1;
-  --text-secondary: #abb8d4;
-  --scrollbar-color: #ffffff1a;
-  --hover-trade-color: #434f75;
-  --table-header-color: #41505e;
-  --indicator-color: #2e3552;
+  --color-green: #01c94c;
+  --color-red: #f86961;
+  --color-blue: #0c6ffb;
+  --text-color: #8b8b8b;
 }
 
 body {
@@ -87,7 +65,7 @@ body {
   height: 40px;
   align-items: center;
   cursor: pointer;
-  color: #8B8B8B;
+  color: var(--text-color);
   width: 100%;
   font-size: 15px;
   font-weight: 500;
@@ -129,7 +107,7 @@ li .col {
   width: 100%;
   padding: 0 10px;
   height: 40px;
-  color: #8B8B8B;
+  color: var(--text-color);
   font-size: 15px;
   font-weight: 500;
   /* border-right: 1px solid #dfdfdf; */
@@ -137,18 +115,40 @@ li .col {
 
 li.open .heading {
   /* background: #4d98bc; */
-  color: #8B8B8B;
+  color: var(--text-color);
 }
 
 li .content {
   width: 100%;
   height: 0px;
-  overflow: hidden; /* Add overflow hidden to hide the content */
-  transition: height 0.5s; /* Use height for the transition */
+  overflow: hidden;
+  transition: height 0.5s;
 }
 
 li.open .content {
-  height: 200px; /* Set the desired height for the open state */
-  transition: height 0.5s; /* Use height for the transition */
+  height: 200px;
+  transition: height 0.5s;
 }
 
+/* details table.css */
+.custom-table .rc-table-thead > tr {
+  background-color: #e4e4e4;
+}
+
+.custom-table .rc-table-tbody > tr {
+  background-color: #e4e4e4;
+}
+
+.rc-table-content > table {
+  border-collapse: separate;
+  border-spacing: 0 3px;
+  color: var(--text-color);
+  font-size: 15px;
+  font-weight: 500;
+}
+.custom-table th {
+  font-weight: 400;
+}
+.custom-table .rc-table-cell {
+  padding: 4px 6px;
+}

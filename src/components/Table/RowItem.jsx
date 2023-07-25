@@ -19,6 +19,7 @@ const RowItem = ({ index, isOpen, setOpenRowIndex, expertTrader, risk_score, lev
         <div className="col">{group}</div>
         <div className="col">{trade}</div>
         <div className="col">{instrument}</div>
+        
         <div className="col">{volume}</div>
         <div className="col">{open_price}</div>
         <div className="col">{open_time}</div>
