@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color-1: #21293c;
+  --top-header-bg: #171e2e;
+  --tab-color: #1a2234;
+  --sidebar-bg: #1c2333;
+  --bg-color-4: #1b212f;
+  --bg-color-5: #273042;
+  --bg-color-6: #252b3d;
+  --bg-color-7: #242c3e;
+  --bg-color-8: #2c3753;
+  --bg-color-9: #2a334d;
+  --bg-color-right-sidebar-1: #394768;
+  --bg-color-right-sidebar-2: #212a40;
+  --color-primary: #2294e6;
+  --color-primary2: #3faaf7;
+  --color-white: #ffffff;
+  --color-white-2: #c6c9cd;
+  --color-black: #000000;
+  --color-red: #ea4335;
+  --color-green: #04be7f;
+  --border-color-profile: #2f384b;
+  --button-color: #ffa665;
+  --text-color: #7d8da1;
+  --text-secondary: #abb8d4;
+  --scrollbar-color: #ffffff1a;
+  --hover-trade-color: #434f75;
+  --table-header-color: #41505e;
+  --indicator-color: #2e3552;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.table {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  height: 30px;
+  width: 100%;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.header.fixed {
+  background: #e8e8e8;
+  z-index: 99;
+  position: fixed;
+  top: 0px;
+}
+
+.header .shadow {
+  position: absolute;
+  top: 31px;
+  height: 3px;
+  width: 100%;
+  background: 0 0 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAECAYAAABP2FU6AAAAF0lEQVR4AWPUkNeSBhHCjJoK2twgFisAFagCCp3pJlAAAAAASUVORK5CYII=) repeat-x;
+}
+
+.header .hcol {
+  display: flex;
+  background-color: #e5e8eb;
+  border-color: #dfdfdf;
+  justify-content: space-between;
+  padding: 0 7px;
+  height: 40px;
+  align-items: center;
+  cursor: pointer;
+  color: #8B8B8B;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 500;
+  /* box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.5); */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 32px;
+  width: 100%;
+  margin-top: 13px;
+}
+
+li {
+  width: 100%;
+  min-height: 40px;
+  /* border-bottom: 1px solid #dfdfdf; */
+}
+
+li .heading {
+  background: #e4e4e4;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  transition: background 0.5s;
+  margin-top: 3px;
+}
+
+li .col {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+  height: 40px;
+  color: #8B8B8B;
+  font-size: 15px;
+  font-weight: 500;
+  /* border-right: 1px solid #dfdfdf; */
+}
+
+li.open .heading {
+  /* background: #4d98bc; */
+  color: #8B8B8B;
+}
+
+li .content {
+  width: 100%;
+  height: 0px;
+  overflow: hidden; /* Add overflow hidden to hide the content */
+  transition: height 0.5s; /* Use height for the transition */
+}
+
+li.open .content {
+  height: 200px; /* Set the desired height for the open state */
+  transition: height 0.5s; /* Use height for the transition */
+}
+
