@@ -4,11 +4,11 @@ const BarChartLevarage = () => {
   return (
     <>
       <div className="space-y-2">
-        <div className="bg-[var(--color-green)] h-[50px] w-[50px] flex flex-col justify-center items-center text-[white] rounded-[3px]">
+        <div className="bg-[var(--color-green)] h-[50px] w-[50px] flex flex-col justify-center items-center text-[white] rounded-[3px] p-[1px] box-border">
           <span className="text-3xl font-medium">1</span>
           <span className="text-[11px]">RISK</span>
         </div>
-        <div className="bg-[var(--color-blue)] h-[50px] w-[50px] flex flex-col justify-center items-center text-[white] rounded-[3px]">
+        <div className="bg-[var(--color-blue)] h-[50px] w-[50px] flex flex-col justify-center items-center text-[white] rounded-[3px] p-1 box-border">
           <svg height="400" viewBox="0 0 512 512" width="400" xmlns="http://www.w3.org/2000/svg">
             <title />
             <path d="M128,496H48V304h80Z" fill="white" />

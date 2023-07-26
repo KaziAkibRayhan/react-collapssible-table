@@ -6,7 +6,7 @@ const RowItem = ({ index, isOpen, setOpenRowIndex, expertTrader, risk_score, lev
     setOpenRowIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
-  const handleContentClick = (e) => {
+  const handleContentStopPropagationClick = (e) => {
     e.stopPropagation();
   };
 
@@ -27,7 +27,7 @@ const RowItem = ({ index, isOpen, setOpenRowIndex, expertTrader, risk_score, lev
         <div className="col">{copy}</div>
         <div className="col">{action}</div>
       </div>
-      <RowContent open={isOpen} handleContentClick={handleContentClick} />
+      <RowContent open={isOpen} handleContentStopPropagationClick={handleContentStopPropagationClick} />
     </li>
   );
 };

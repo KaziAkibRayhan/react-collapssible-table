@@ -7,11 +7,11 @@ const Performance = () => {
     setActiveButton(buttonText);
   };
   return (
-    <div className="p-5 box-border space-y-5">
+    <div className="p-5 box-border space-y-4">
       <div>
         <h4 className="p-0 m-0 font-semibold text-[15px]">Performance</h4>
       </div>
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-6">
         <div>
           <p className="m-0 p-0 text-[10px] text-[var(--text-color)] font-medium mb-[7px]">GAIN</p>
           <p className="m-0 -mt-1 p-0 text-[var(--color-red)] text-[13px] font-bold">-0.24%</p>
